@@ -10,6 +10,7 @@ import Header from './component/Header/Header';
 import Home from './component/Home/Home';
 import NotFound from './component/NotFound/NotFound';
 import NewsDetail from './component/NewsDetail/NewsDetail';
+import Details from './component/Details/Details';
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
         </Route>
         <Route path="/news/:newsId">
           <NewsDetail />
+        </Route>
+        <Route path='/details'>
+          <Details />
         </Route>
         <Route exact path="/">
           <Home />

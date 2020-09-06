@@ -3,3 +3,8 @@ a{
     color: white;
     margin-left: 20px;
 }
+a:hover{
+    background-color: #3f51b5 !important;
+    color: white !important;
+    padding:20px 10px;
+}

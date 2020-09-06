@@ -8,6 +8,7 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
+
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
@@ -24,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
 const Header = () => {
     const classes = useStyles();
     return (
-        <div className={classes.root}>
+        <div style={{backgroundColor:'rgba(206, 156, 156, 0.4)'}} className={classes.root}>
         <AppBar position="static">
           <Toolbar>
             <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">

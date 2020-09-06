@@ -7,7 +7,6 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
@@ -43,24 +42,22 @@ const News = (props) => {
     return (
       <Grid item xs={4}>
         <Paper className={classes.paper}>
-          <Box display="flex" flexDirection="column" flexWrap="wrap" justifyContent="flex-center"  boxShadow={3} spacing={3}>
             <Card className={classes.root} variant="outlined">
-                <CardContent>
-                <Typography className={classes.title} color="textSecondary" gutterBottom>
-                    <h3>{title.slice(0, 20)}</h3>
-                </Typography>
-                <Typography variant="body2" component="p">
-                    <p>{body.slice(0, 60)} ...</p>
-                </Typography>
-                </CardContent>
-                <CardActions>
-                    <Button  variant="contained" onClick={() => handleClick(id)}>Show Details</Button>
-                </CardActions>
+                  <CardContent>
+                  <Typography className={classes.title} color="textSecondary" gutterBottom>
+                      <h3>{title.slice(0, 20)}</h3>
+                  </Typography>
+                  <Typography variant="body2" component="p">
+                      <p>{body.slice(0, 60)} ...</p>
+                  </Typography>
+                  </CardContent>
+                  <CardActions className="main-button">
+                      <Button  variant="contained" onClick={() => handleClick(id)}>Read More</Button>
+                  </CardActions>
             </Card>
-          </Box> 
         </Paper>
       </Grid>
-     
+
     );
 };
 

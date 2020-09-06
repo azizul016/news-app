@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import Box from '@material-ui/core/Box';
 import './NewDetail.css';
-import Typography from '@material-ui/core/Typography';
 
 const NewsDetail = () => {
     const {newsId} = useParams();
@@ -22,9 +21,9 @@ const NewsDetail = () => {
     }, [])
     return (
         <Box boxShadow={6} className="detailInfo">
-            <h1>Post and Comments Details</h1>
-            <h2><span>Title:</span> {newsDetail.title}</h2>
-            <p><span>Details:</span> {newsDetail.body}</p>
+            <h2>{newsDetail.title}</h2>
+            <p>{newsDetail.body}</p>
+            <h1>Comments</h1>
             {
                 comments.map(comment => 
                     <div className="comments-container" key = {comment.id}> 
@@ -32,8 +31,11 @@ const NewsDetail = () => {
                             <img src="https://iili.io/2Hocrb.th.jpg" alt=""/>
                         </div>
                         <div style={{marginLeft:'20px'}}>
-                            <h4>{comment.name}</h4>
-                            <p>{comment.email}</p>
+                            <div style={{display: 'flex', alignItems: 'center'}}>
+                            <h3>{comment.name}</h3>
+                            <h4 style={{marginLeft:'10px',color:'#303f9f'}}>By:</h4>
+                            <p style={{color:'#303f9f'}}>{comment.email}</p>
+                            </div>
                             <p><small>{comment.body}</small></p>
                         </div>
                     </div>
