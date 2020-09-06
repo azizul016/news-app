@@ -3,6 +3,7 @@ import './Home.css'
 import News from '../News/News';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -27,13 +28,13 @@ const Home = () => {
     },[])
     
     return (
-        <div className={classes.root}>
+        <Container  className={classes.root}>
             <Grid container spacing={3}>
                 {
                     news.map(news => <News key={news.id} news={news}></News>)
                 }
             </Grid>
-        </div>
+        </Container>
     );
 };
 

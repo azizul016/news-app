@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
 const Header = () => {
     const classes = useStyles();
     return (
-        <div style={{backgroundColor:'rgba(206, 156, 156, 0.4)'}} className={classes.root}>
+        <div style={{backgroundColor:'rgba(206, 156, 156, 0.4)', marginBottom:"30px"}} className={classes.root}>
         <AppBar position="static">
           <Toolbar>
             <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
